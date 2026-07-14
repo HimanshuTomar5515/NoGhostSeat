@@ -105,7 +105,7 @@ export const ShowDetailsPage = () => {
     const inventoryResponse = await api.get(`/api/inventory/show/${showId}`);
     setSeats(inventoryResponse.data.data.seats);
   };
-  
+
   if (loading) {
     return <p>Loading seats...</p>;
   }
@@ -115,8 +115,13 @@ export const ShowDetailsPage = () => {
   }
 
   return (
-    <div>
-      <h1>Select Seats</h1>
+     <div className="page">
+    <div className="page-header">
+      <h1 className="page-title">Select Seats</h1>
+      <p className="page-subtitle">
+        Green seats are available. Locked and booked seats cannot be selected.
+      </p>
+    </div>
 
       {seats.length === 0 ? (
         <p>No seats found for this show. Please initialize inventory.</p>
@@ -139,6 +144,7 @@ export const ShowDetailsPage = () => {
         <button
           onClick={handleCreateBooking}
           disabled={bookingLoading || selectedSeats.length === 0}
+          className="btn btn-primary"
           style={{
             marginTop: "12px",
             padding: "10px 16px",

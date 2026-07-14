@@ -12,20 +12,33 @@ export const Navbar = () => {
 
   return (
     <nav
-      style={{
-        display: "flex",
-        gap: "16px",
-        padding: "12px",
-        borderBottom: "1px solid #ddd",
-        marginBottom: "20px",
-      }}
+     style={{
+      background: "white",
+      borderBottom: "1px solid #e2e8f0",
+      padding: "14px 24px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      position: "sticky",
+      top: 0,
+      zIndex: 10,
+    }}
     >
+
+         <Link to="/"  style={{
+        fontSize: "22px",
+        fontWeight: 800,
+        color: "#0f172a",
+        textDecoration: "none",
+      }}>🎟️ NoGhostSeat</Link>
+    
+      <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
       <Link to="/shows">Shows</Link>
 
       {token ? (
         <>
           <Link to="/my-bookings">My Bookings</Link>
-          <button onClick={handleLogout}>Logout</button>
+          <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
         </>
       ) : (
         <>
@@ -33,6 +46,7 @@ export const Navbar = () => {
           <Link to="/register">Register</Link>
         </>
       )}
+      </div>
     </nav>
   );
 };

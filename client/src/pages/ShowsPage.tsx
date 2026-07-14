@@ -55,8 +55,13 @@ export const ShowsPage = () => {
   }
 
   return (
-    <div>
-      <h1>NoGhostSeat Shows</h1>
+     <div className="page">
+    <div className="page-header">
+      <h1 className="page-title">Available Shows</h1>
+      <p className="page-subtitle">
+        Choose a show and reserve your seats safely.
+      </p>
+    </div>
 
       {shows.length === 0 ? (
         <p>No shows available.</p>
@@ -64,6 +69,7 @@ export const ShowsPage = () => {
         <div>
           {shows.map((show) => (
             <div
+            className="card"
               key={show._id}
               style={{
                 border: "1px solid #ddd",

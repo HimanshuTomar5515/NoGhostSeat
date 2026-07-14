@@ -41,7 +41,8 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div>
+   <div className="page">
+  <div className="card" style={{ maxWidth: "420px", margin: "40px auto" }}>
       <h1>Register</h1>
 
       <form onSubmit={handleRegister}>
@@ -49,6 +50,7 @@ export const RegisterPage = () => {
           <label>Name</label>
           <br />
           <input
+           className="input" 
             type="text"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -60,6 +62,7 @@ export const RegisterPage = () => {
           <label>Email</label>
           <br />
           <input
+           className="input" 
             type="email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
@@ -71,6 +74,7 @@ export const RegisterPage = () => {
           <label>Password</label>
           <br />
           <input
+           className="input" 
             type="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
@@ -78,7 +82,7 @@ export const RegisterPage = () => {
           />
         </div>
 
-        <button type="submit" disabled={loading}>
+        <button className="btn btn-primary" type="submit" disabled={loading}>
           {loading ? "Registering..." : "Register"}
         </button>
       </form>
@@ -90,5 +94,7 @@ export const RegisterPage = () => {
         Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
+    </div>
+    
   );
 };

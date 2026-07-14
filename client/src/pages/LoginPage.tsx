@@ -36,7 +36,8 @@ export const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div className="page">
+  <div className="card" style={{ maxWidth: "420px", margin: "40px auto" }}>
       <h1>Login</h1>
 
       <form onSubmit={handleLogin}>
@@ -44,6 +45,7 @@ export const LoginPage = () => {
           <label>Email</label>
           <br />
           <input
+          className="input"
             type="email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
@@ -55,6 +57,7 @@ export const LoginPage = () => {
           <label>Password</label>
           <br />
           <input
+          className="input"
             type="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
@@ -62,7 +65,7 @@ export const LoginPage = () => {
           />
         </div>
 
-        <button type="submit" disabled={loading}>
+        <button className="btn btn-primary"  type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>
@@ -72,6 +75,7 @@ export const LoginPage = () => {
       <p>
         New user? <Link to="/register">Register</Link>
       </p>
+    </div>
     </div>
   );
 };
