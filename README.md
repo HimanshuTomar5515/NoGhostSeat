@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎟️ SeatFlow
+# 🎟️ NoGhostSeat
 
 **A MERN + TypeScript ticket-booking system built for failure-aware, real-world booking scenarios.**
 
@@ -8,7 +8,7 @@
 
 ---
 
-SeatFlow is a MERN + TypeScript ticket-booking system focused on **failure-aware booking**. Instead of being just a CRUD application, it handles real-world booking scenarios such as temporary seat locking, payment success/failure, booking expiry, and double-booking prevention.
+NoGhostSeat is a MERN + TypeScript ticket-booking system focused on **failure-aware booking**. Instead of being just a CRUD application, it handles real-world booking scenarios such as temporary seat locking, payment success/failure, booking expiry, and double-booking prevention.
 
 ---
 
@@ -174,4 +174,4 @@ Made with ❤️ by [Himanshu Tomar](https://github.com/HimanshuTomar5515)
 
 ## Resume Highlight
 
-Built **SeatFlow**, a MERN + TypeScript ticket-booking system featuring modular architecture, JWT authentication, temporary seat locking, booking lifecycle management, payment simulation, booking expiry, and concurrency-aware seat reservation.
+Built **NoGhostSeat**, a MERN + TypeScript ticket-booking system featuring modular architecture, JWT authentication, temporary seat locking, booking lifecycle management, payment simulation, booking expiry, and concurrency-aware seat reservation.
